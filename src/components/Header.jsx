@@ -45,23 +45,23 @@ const Header = () => {
         {/* Main Heading */}
         <h1
           data-aos="zoom-in"
-          className="text-white text-4xl sm:text-6xl md:text-7xl lg:text-[90px] xl:text-[116px] font-bold text-center pt-6 sm:pt-10 px-4 leading-tight"
+          className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-[80px] xl:text-[100px] font-bold text-center pt-6 sm:pt-10 px-4 leading-tight"
         >
           Where the vibe finds you
         </h1>
 
         {/* Sub text + Vector */}
-        <div className="px-6 sm:px-12 md:px-20 mt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="md:w-2/3">
+        <div className="px-6 sm:px-12 md:px-20 mt-20 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="md:w-2/5 ">
             <p
               data-aos="zoom-in-right"
               className="text-white text-sm sm:text-base md:text-lg leading-relaxed"
             >
-              Come for the inspiration, Stay for the journey you didn’t see
+              Come for the inspiration, Stay for the journey you didn’t see 
               coming, leave with a story you can’t stop telling
             </p>
           </div>
-          <div className="md:w-1/3 flex justify-center">
+          <div className="md:w-1/3 flex justify-end">
             <img
               data-aos="zoom-in-left"
               src={Vector8}
@@ -71,7 +71,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* ✅ Sign Up Button */}
         <div
           data-aos="fade-up"
           className="flex justify-center items-center mx-auto bg-white w-[80%] sm:w-[250px] rounded-lg py-2 sm:py-3 mt-6 gap-3 shadow-md"

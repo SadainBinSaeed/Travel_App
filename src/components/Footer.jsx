@@ -20,7 +20,7 @@ function Footer() {
       </div>
 
       {/* Footer Section */}
-      <footer className="bg-blue-100 text-gray-800 pt-56 pb-10 relative z-0">
+      <footer className="bg-blue-100 text-gray-800 pt-56 pb-20 relative z-0">
         <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row md:justify-between md:items-center gap-6">
           {/* Logo */}
           <div className="flex items-center justify-center md:justify-start space-x-2">
