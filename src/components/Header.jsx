@@ -76,7 +76,7 @@ const Header = () => {
           className="flex justify-center items-center mx-auto bg-white w-[80%] sm:w-[250px] rounded-lg py-2 sm:py-3 mt-6 gap-3 shadow-md"
         >
           <Link to="/signup">
-            <button className="uppercase cursor-pointer text-sm sm:text-base font-semibold">
+            <button className="uppercase cursor-pointer text-sm sm:text-base font-semibold ">
               Sign Up Free
             </button>
           </Link>
