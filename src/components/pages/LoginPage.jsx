@@ -151,9 +151,9 @@ const LoginPage = () => {
 
           <p className="text-gray-400 text-xs md:text-sm text-center mb-6">
             Login below or{" "}
-            <Link to="/signup" className="text-blue-400 hover:underline cursor-pointer">
+            <span className="text-blue-400 hover:underline cursor-pointer">
               create an account
-            </Link>
+            </span>
           </p>
 
           <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
@@ -203,7 +203,7 @@ const LoginPage = () => {
             <p className="text-xs md:text-sm text-gray-400 text-center mt-2 mb-6">
               Don’t have an account?{" "}
               <Link to="/signup" className="text-blue-400 hover:underline cursor-pointer">
-                Sign up
+              Sign up 
               </Link>
             </p>
           </form>

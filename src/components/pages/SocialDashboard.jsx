@@ -166,7 +166,9 @@ export default function SocialDashboard() {
   return (
     <div className="min-h-screen bg-[#0b1220] text-slate-100">
       {/* Top Nav */}
-      <header className="sticky top-0 z-40 border-b border-slate-800/60 bg-[#0b1220]/80 backdrop-blur">
+      
+
+<header className="sticky top-0 z-40 border-b border-slate-800/60 bg-[#0b1220]/80 backdrop-blur">
         <div className="mx-auto max-w-[1200px] px-4">
           <div className="flex h-14 items-center justify-between gap-4">
             
@@ -191,6 +193,8 @@ export default function SocialDashboard() {
           </div>
         </div>
       </header>
+
+
 
       <main className="mx-auto max-w-[1200px] px-4 py-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Sidebar */}
