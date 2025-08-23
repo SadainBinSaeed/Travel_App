@@ -26,7 +26,7 @@ const App = () => {
               <StackedSections />
               <TravelStyle />
               <Footer />
-              {/* <SocialDashboard /> */}
+           
             </>
                   }        />
 
