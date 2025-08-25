@@ -1,15 +1,18 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import centerImg  from  "../assets/images/center-img-hero.svg"
+import  leftTopImg from "../assets/images/left-img-hero.svg"
+import  leftBottomImg from "../assets/images/left-bottom-hero.jpg"
+import  rightTopImg from "../assets/images/right-img-hero.svg"
+import  rightBottomImg from "../assets/images/right-bottom-hero.jpg"
+
 
 export default function TravelingHeroClone({
-  centerImg = "../src/assets/images/center-img-hero.svg",
-  leftTopImg = "../src/assets/images/left-img-hero.svg",
-  leftBottomImg = "../src/assets/images/left-bottom-hero.jpg",
-  rightTopImg = "../src/assets/images/right-img-hero.svg",
-  rightBottomImg = "../src/assets/images/right-bottom-hero.jpg",
-  headingTop = "Stories Worth",
-  headingBottom = "Traveling For.",
+
+    headingTop = "Stories Worth",
+  headingBottom = "Traveling For."
+  
 }) {
   useEffect(() => {
     AOS.init({
