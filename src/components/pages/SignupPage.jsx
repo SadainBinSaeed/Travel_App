@@ -107,11 +107,13 @@ const SignupPage = () => {
             </div>
 
             {/* Signup button */}
+             <Link to="/dashboard">
             <button
               type="submit"
               className="w-full py-3 rounded-md font-semibold bg-[#1e90ff] hover:bg-[#1676d6] text-white transition cursor-pointer">
-              <Link to="/dashboard">Signup</Link>
+             Signup
             </button>
+            </Link>
           </form>
         </div>
 

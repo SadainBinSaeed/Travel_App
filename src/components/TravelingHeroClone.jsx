@@ -49,9 +49,25 @@ export default function TravelingHeroClone({
 
           {/* Center image + text */}
           <div data-aos="zoom-in" className="flex flex-col items-center gap-6">
-            <RoundedCard className="mx-auto w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px]">
-              <Img src={centerImg} alt="center" />
-            </RoundedCard>
+{/*            
+<RoundedCard className="mx-auto w-full max-w-[400px] sm:max-w-[500px] overflow-hidden">
+  <img
+    src={centerImg}
+    alt="center"
+    className="w-full h-full object-cover block"
+  />
+</RoundedCard> */}
+
+<RoundedCard className="mx-auto w-full max-w-[400px] sm:max-w-[500px] overflow-hidden">
+  <img
+    src={centerImg}
+    alt="center"
+    className="w-full h-full object-cover block"
+    style={{ objectPosition: "center", margin: "-2% 0.3% -2% 0.2%"  }}
+  />
+</RoundedCard>
+
+
 
             <div className="text-center px-2">
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-slate-700">
@@ -99,13 +115,7 @@ export default function TravelingHeroClone({
 
 function RoundedCard({ children, className = "" }) {
   return (
-    <div
-      className={
-        "relative overflow-hidden rounded-[20px] bg-white/70 ring-1 ring-slate-200 shadow-xl backdrop-blur-sm " +
-        className
-      }
-      style={{ aspectRatio: "1 / 1.1" }}
-    >
+    <div className={"overflow-hidden rounded-[20px] " + className}>
       {children}
     </div>
   );
@@ -116,8 +126,7 @@ function Img({ src, alt }) {
     <img
       src={src}
       alt={alt}
-      className="h-full w-full object-cover object-center"
-      loading="lazy"
+      className="w-full h-full object-cover block"
     />
   );
 }

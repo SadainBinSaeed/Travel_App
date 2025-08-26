@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+// import {  as Router } from "react-router-dom";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   useLocation,
