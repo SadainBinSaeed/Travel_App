@@ -28,6 +28,37 @@ const StoryCircle = ({ src, name, active }) => (
   </div>
 );
 
+
+// const StoryCircle = ({ stories, avatar }) => {
+//   const scrollRef = useRef(null);
+//   let isDown = false;
+//   let startX;
+//   let scrollLeft;
+
+//   const handleMouseDown = (e) => {
+//     isDown = true;
+//     startX = e.pageX - scrollRef.current.offsetLeft;
+//     scrollLeft = scrollRef.current.scrollLeft;
+//   };
+
+//   const handleMouseLeave = () => {
+//     isDown = false;
+//   };
+
+//   const handleMouseUp = () => {
+//     isDown = false;
+//   };
+
+//   const handleMouseMove = (e) => {
+//     if (!isDown) return;
+//     e.preventDefault();
+//     const x = e.pageX - scrollRef.current.offsetLeft;
+//     const walk = (x - startX) * 2; // speed multiplier
+//     scrollRef.current.scrollLeft = scrollLeft - walk;
+//   };
+
+
+
 const SideLink = ({ icon: Icon, label, active=false }) => (
   <button className={`group w-full flex items-center gap-3 rounded-xl px-3 py-2 text-sm ${active ? 'bg-slate-800 text-slate-100' : 'text-slate-300 hover:bg-slate-800/70'} transition`}> 
     <Icon size={16} className="shrink-0 opacity-80"/>
@@ -211,7 +242,7 @@ export default function SocialDashboard() {
     <div className="min-h-screen bg-[#0b1220] text-slate-100">
       {/* Top Nav */}
       <header className="sticky top-0 z-40 border-b border-slate-800/60 bg-[#0b1220]/80 backdrop-blur">
-        <div className="mx-auto max-w-[1200px] px-4">
+        <div className="Max-w-7xl w-[100%] px-4">
           <div className="flex h-14 items-center justify-between gap-4">
             <div className="h-10 w-10 rounded-full grid place-items-center font-black"><img src={Travel_icon} alt="travelicon"  /></div>
             <div className="flex-1 max-w-xl">
@@ -283,7 +314,7 @@ export default function SocialDashboard() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-[1200px] px-4 py-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <main className="Max-w-7xl w-[100%] px-4 py-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Sidebar */}
         <aside className="lg:col-span-3 space-y-4">
           <ProfileCard/>
@@ -311,6 +342,11 @@ export default function SocialDashboard() {
                 <StoryCircle key={s.id} src={avatar(s.id)} name={s.name} active={idx%3===0}/>
               ))}
             </div>
+
+
+
+
+       
           </div>
           <Composer/>
           <FeedCard/>
@@ -365,4 +401,3 @@ export default function SocialDashboard() {
     </div>
   );
 }
-
