@@ -19,6 +19,13 @@ import StackedSections from "./components/StackedSections";
 import TravelStyle from "./components/TravelStyle";
 import Footer from "./components/Footer";
 import ProfileDropdown from "./components/ProfileDropdown";
+import NicheFocusPage from "./components/NicheFocusPage";
+import ApplyCard from "./components/pages/ApplyCard";
+import CreatorDashboard from "./components/pages/CreatorDashboard";
+import CreatorProfile from "./components/pages/CreatorProfile";
+import UploadSection from "./components/pages/UploadSection";
+import AdminDashboardOne from "./components/AdmindashboardOne";
+import AdminDashboardTwo from "./components/AdminDashBoardTwo";
 
 // ✨ Fancy Loader
 const Loader = () => (
@@ -42,7 +49,7 @@ const Layout = () => {
 
  
   // In pages pe Header nahi chahiye
-const hideHeaderRoutes = ["/login", "/signup", "/dashboard", "/profile"];
+const hideHeaderRoutes = ["/login", "/signup", "/dashboard", "/profile" , "/applycard" ,"/creatordashboard", "/creatorprofile",  "/creatorprofile/uploadsection"];
 const shouldHideHeader = hideHeaderRoutes.includes(location.pathname);
 
 
@@ -74,13 +81,23 @@ const shouldHideHeader = hideHeaderRoutes.includes(location.pathname);
               <TravelStyle />
               <Footer />
               <ProfileDropdown/>
+              <NicheFocusPage/>
+              <AdminDashboardOne/>
+              <AdminDashboardTwo/>
+              
             </>
           }
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/dashboard" element={<SocialDashboard />} />
-         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/applycard" element={<ApplyCard />} />
+        <Route path="/creatordashboard" element={<CreatorDashboard />} />
+        <Route path="/creatorprofile" element={<CreatorProfile/>} />
+        <Route path="/creatorprofile/uploadsection" element={<UploadSection />} />
+
+       
       </Routes>
     </>
   );
