@@ -12,6 +12,8 @@ import {
   Settings,
   ChevronRight,
 } from "lucide-react";
+import { FaFacebookF , FaTwitter , FaInstagram} from "react-icons/fa";
+
 
 // ✅ StatCard
 const StatCard = ({ title, value, sublabel, trend = "up" }) => {
@@ -113,61 +115,6 @@ const ActionBtn = ({ kind = "approve", onClick }) => {
 };
 
 
-
-
-// // ✅ CreatorCard
-// const CreatorCard = ({ idx }) => (
-//   <div className="bg-[#111827] rounded-xl border border-white/5 shadow-inner p-4 flex flex-col gap-3">
-//     <div className="flex items-start gap-3">
-//       <div className="h-9 w-9 rounded-full bg-white/10 ring-1 ring-white/10 overflow-hidden" />
-//       <div className="flex-1 min-w-0">
-//         <p className="text-sm font-medium text-white/90 leading-tight">
-//           Creator Name
-//         </p>
-//         <p className="text-[11px] text-white/50 truncate">
-//           john@demo{idx}.com
-//         </p>
-//       </div>
-//       <button className="h-8 w-8 rounded-md bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center">
-//         <MoreHorizontal size={16} className="text-white/60" />
-//       </button>
-//     </div>
-
-//     <div className="text-[11px] text-white/45 space-y-1">
-//       <p>
-//         <span className="text-white/60">Application Date:</span> Aug 23, 2025
-//       </p>
-//       <div>
-//         <span className="text-white/60">Bio</span>
-//         <p className="mt-0.5 text-white/45 line-clamp-2">
-//           Travel vlogger, lifestyle content.
-//         </p>
-//       </div>
-//     </div>
-
-//     <div>
-//       <p className="text-[11px] text-white/60 mb-2">Socials</p>
-//       <div className="flex items-center gap-2">
-//         <SocialIcon label="f" />
-//         <SocialIcon label="x" />
-//         <SocialIcon label="ig" />
-//       </div>
-//     </div>
-
-//     <div className="mt-2 flex items-center gap-2">
-//       <ActionBtn kind="Approve"/>
-//       <ActionBtn kind="Deny" />
-//           </div>
-//           <div className="mt-2 flex items-center gap-2">
-//       <ActionBtn kind="Preview" />
-//       <ActionBtn kind="Flag" />
-//           </div>
-//   </div>
-// );
-
-
-
-
 // ✅ CreatorCard
 const CreatorCard = ({ idx }) => (
   <div className="bg-[#111827] rounded-xl border border-white/5 shadow-inner p-4 flex flex-col gap-3">
@@ -198,14 +145,29 @@ const CreatorCard = ({ idx }) => (
       </div>
     </div>
 
-    <div>
+    {/* <div>
       <p className="text-[11px] text-white/60 mb-2">Socials</p>
       <div className="flex items-center gap-2">
-        <SocialIcon label="f" />
+        {/* <SocialIcon label="f" />
         <SocialIcon label="x" />
-        <SocialIcon label="ig" />
-      </div>
-    </div>
+        <SocialIcon label="ig" /> */}
+       {/* <div className="bg-gray-700 h-7 w-7 flex items-center justify-center rounded-[10px]">  <FaFacebookF/></div> */}
+        {/* <div className="bg-gray-700 h-7 w-7 flex items-center justify-center rounded-[10px]"><FaTwitter/></div> */}
+        {/* <div className="bg-gray-700 h-7 w-7 flex items-center justify-center rounded-[10px]"><FaInstagram/></div> */}
+    {/* </div>  */}
+
+    <div className="flex items-center gap-2">
+  <div className="bg-gray-700 h-7 w-7 flex items-center justify-center rounded-[10px]">  
+    <FaFacebookF/>
+  </div>
+  <div className="bg-gray-700 h-7 w-7 flex items-center justify-center rounded-[10px]">
+    <FaTwitter/>
+  </div>
+  <div className="bg-gray-700 h-7 w-7 flex items-center justify-center rounded-[10px]">
+    <FaInstagram/>
+  </div>
+</div>
+
 
     {/* ✅ Buttons */}
     <div className="mt-2 flex flex-wrap  gap-2">
