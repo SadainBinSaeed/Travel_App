@@ -199,8 +199,8 @@ const shouldHideHeader = hideHeaderRoutes.includes(location.pathname);
               <Footer />
               <ProfileDropdown/>
               <NicheFocusPage/>
-              <AdminDashboardOne/>
-              <AdminDashboardTwo/>
+              {/* <AdminDashboardOne/>
+              <AdminDashboardTwo/> */}
               
             </>
           }

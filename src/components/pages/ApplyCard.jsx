@@ -18,11 +18,11 @@ const ApplyCard = () => {
           <p className="text-gray-600 text-sm md:text-base leading-relaxed">
             Applications are reviewed within 24–48 hours. You’ll receive an email once approved.
           </p>
-          <Link to="/creatordashboard">
+          {/* <Link to="/creatordashboard"> */}
           <button className="mt-10 bg-[#0154B2] hover:bg-[#014399] text-white w-[300px] max-w-full h-11 rounded-2xl transition cursor-pointer">
             Okay
           </button>
-          </Link>
+          {/* </Link> */}
         </div>
       </div>
 
