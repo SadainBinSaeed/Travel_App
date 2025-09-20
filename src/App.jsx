@@ -1,3 +1,120 @@
+// import React, { useState, useEffect } from "react";
+// import "./App.css";
+// // import {  as Router } from "react-router-dom";
+// import {
+//   HashRouter as Router,
+//   Routes,
+//   Route,
+//   useLocation,
+// } from "react-router-dom";
+
+// import LoginPage from "./components/pages/LoginPage";
+// import SignupPage from "./components/pages/SignupPage";
+// import SocialDashboard from "./components/pages/SocialDashboard";
+// import ProfilePage from "./components/pages/ProfilePage";
+// import Header from "./components/Header";
+// import TravelingHeroClone from "./components/TravelingHeroClone";
+// import Adventure from "./components/Adventure";
+// import StackedSections from "./components/StackedSections";
+// import TravelStyle from "./components/TravelStyle";
+// import Footer from "./components/Footer";
+// import ProfileDropdown from "./components/ProfileDropdown";
+// import NicheFocusPage from "./components/NicheFocusPage";
+// import ApplyCard from "./components/pages/ApplyCard";
+// import CreatorDashboard from "./components/pages/CreatorDashboard";
+// import CreatorProfile from "./components/pages/CreatorProfile";
+// import UploadSection from "./components/pages/UploadSection";
+// import AdminDashboardOne from "./components/AdmindashboardOne";
+// import AdminDashboardTwo from "./components/AdminDashBoardTwo";
+
+// // ✨ Fancy Loader
+// const Loader = () => (
+//   <div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800">
+//     <div className="relative">
+//       {/* Outer glow ring */}
+//       <div className="w-24 h-24 rounded-full border-t-4 border-blue-500 animate-spin shadow-[0_0_40px_#3b82f6]"></div>
+
+//       {/* Inner gradient pulse */}
+//       <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 blur-md animate-pulse"></div>
+
+//       {/* Center dot */}
+//       <div className="absolute inset-7 bg-white rounded-full shadow-lg"></div>
+//     </div>
+//   </div>
+// );
+
+// const Layout = () => {
+//   const location = useLocation();
+//   const [loading, setLoading] = useState(false);
+
+ 
+//   // In pages pe Header nahi chahiye
+// const hideHeaderRoutes = ["/login", "/signup", "/dashboard", "/profile" , "/applycard" ,"/creatordashboard", "/creatorprofile",  "/creatorprofile/uploadsection"];
+// const shouldHideHeader = hideHeaderRoutes.includes(location.pathname);
+
+
+//   useEffect(() => {
+//     // Har route change par loader dikhayega
+//     setLoading(true);
+//     const timer = setTimeout(() => {
+//       setLoading(false);
+//     }, 2000);
+
+//     return () => clearTimeout(timer);
+//   }, [location.pathname]);
+
+//   if (loading) {
+//     return <Loader />;
+//   }
+
+//   return (
+//     <>
+//       {!shouldHideHeader && <Header />}
+//       <Routes>
+//         <Route
+//           path="/"
+//           element={
+//             <>
+//               <TravelingHeroClone />
+//               <Adventure />
+//               <StackedSections />
+//               <TravelStyle />
+//               <Footer />
+//               <ProfileDropdown/>
+//               <NicheFocusPage/>
+//               <AdminDashboardOne/>
+//               <AdminDashboardTwo/>
+              
+//             </>
+//           }
+//         />
+//         <Route path="/login" element={<LoginPage />} />
+//         <Route path="/signup" element={<SignupPage />} />
+//         <Route path="/dashboard" element={<SocialDashboard />} />
+//         <Route path="/profile" element={<ProfilePage />} />
+//         <Route path="/applycard" element={<ApplyCard />} />
+//         <Route path="/creatordashboard" element={<CreatorDashboard />} />
+//         <Route path="/creatorprofile" element={<CreatorProfile/>} />
+//         <Route path="/creatorprofile/uploadsection" element={<UploadSection />} />
+
+       
+//       </Routes>
+//     </>
+//   );
+// };
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <Layout />
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+
 import React, { useState, useEffect } from "react";
 import "./App.css";
 // import {  as Router } from "react-router-dom";
@@ -49,7 +166,7 @@ const Layout = () => {
 
  
   // In pages pe Header nahi chahiye
-const hideHeaderRoutes = ["/login", "/signup", "/dashboard", "/profile" , "/applycard" ,"/creatordashboard", "/creatorprofile",  "/creatorprofile/uploadsection"];
+const hideHeaderRoutes = ["/login", "/signup", "/dashboard", "/profile" , "/applycard" ,"/creatordashboard", "/creatorprofile",  "/creatorprofile/uploadsection" ,"/admindashboard1", "/admindashboard2"];
 const shouldHideHeader = hideHeaderRoutes.includes(location.pathname);
 
 
@@ -96,6 +213,9 @@ const shouldHideHeader = hideHeaderRoutes.includes(location.pathname);
         <Route path="/creatordashboard" element={<CreatorDashboard />} />
         <Route path="/creatorprofile" element={<CreatorProfile/>} />
         <Route path="/creatorprofile/uploadsection" element={<UploadSection />} />
+        <Route path="/admindashboard1" element={<AdminDashboardOne />} />
+<Route path="/admindashboard2" element={<AdminDashboardTwo />} />
+
 
        
       </Routes>
